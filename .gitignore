@@ -1,0 +1,4 @@
+.env
+venv/
+test-kafka.bat
+kafka_2.13-3.9.1/
