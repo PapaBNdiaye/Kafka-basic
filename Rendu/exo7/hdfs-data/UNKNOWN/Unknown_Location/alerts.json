@@ -1,0 +1,1290 @@
+[
+  {
+    "timestamp": "2025-09-22T16:13:51.481474",
+    "event_time": "2025-09-22T15:29:35.612034",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 26.9,
+      "windspeed": 18.9,
+      "winddirection": 211
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 34,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.497494",
+    "event_time": "2025-09-22T15:29:35.894723",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 15.0,
+      "windspeed": 20.2,
+      "winddirection": 268
+    },
+    "alerts": {
+      "wind_level": "level_2",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 35,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.514472",
+    "event_time": "2025-09-22T15:30:28.801384",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 28.5,
+      "windspeed": 4.7,
+      "winddirection": 67
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 36,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.531472",
+    "event_time": "2025-09-22T15:30:31.981727",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 12.9,
+      "windspeed": 20.5,
+      "winddirection": 148
+    },
+    "alerts": {
+      "wind_level": "level_2",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 37,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.547473",
+    "event_time": "2025-09-22T15:33:49.762334",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 21.5,
+      "windspeed": 4.3,
+      "winddirection": 42
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 38,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.568471",
+    "event_time": "2025-09-22T15:33:49.769292",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 14.4,
+      "windspeed": 12.6,
+      "winddirection": 270
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 39,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.593475",
+    "event_time": "2025-09-22T15:33:49.777309",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 21.9,
+      "windspeed": 18.9,
+      "winddirection": 9
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 40,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.602478",
+    "event_time": "2025-09-22T15:35:43.115190",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 21.5,
+      "windspeed": 4.3,
+      "winddirection": 42
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 41,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.613469",
+    "event_time": "2025-09-22T15:35:43.126403",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 14.4,
+      "windspeed": 12.6,
+      "winddirection": 270
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 42,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.630470",
+    "event_time": "2025-09-22T15:35:43.142402",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 21.9,
+      "windspeed": 18.9,
+      "winddirection": 9
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 43,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.647473",
+    "event_time": "2025-09-22T15:39:55.340287",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 27.9,
+      "windspeed": 1.8,
+      "winddirection": 307
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 44,
+      "partition": 0,
+      "source": "demo-finale-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.664469",
+    "event_time": "2025-09-22T15:39:57.638284",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 15.2,
+      "windspeed": 31.0,
+      "winddirection": 250
+    },
+    "alerts": {
+      "wind_level": "level_2",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 45,
+      "partition": 0,
+      "source": "demo-finale-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.680474",
+    "event_time": "2025-09-22T15:45:33.106095",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 28.1,
+      "windspeed": 2.1,
+      "winddirection": 301
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 46,
+      "partition": 0,
+      "source": "demo-finale-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.697469",
+    "event_time": "2025-09-22T15:45:35.368269",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 15.1,
+      "windspeed": 31.0,
+      "winddirection": 250
+    },
+    "alerts": {
+      "wind_level": "level_2",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 47,
+      "partition": 0,
+      "source": "demo-finale-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:33.070312",
+    "event_time": "2025-09-22T15:29:35.612034",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 26.9,
+      "windspeed": 18.9,
+      "winddirection": 211
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 34,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:33.098315",
+    "event_time": "2025-09-22T15:29:35.894723",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 15.0,
+      "windspeed": 20.2,
+      "winddirection": 268
+    },
+    "alerts": {
+      "wind_level": "level_2",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 35,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:33.130319",
+    "event_time": "2025-09-22T15:30:28.801384",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 28.5,
+      "windspeed": 4.7,
+      "winddirection": 67
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 36,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:33.164313",
+    "event_time": "2025-09-22T15:30:31.981727",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 12.9,
+      "windspeed": 20.5,
+      "winddirection": 148
+    },
+    "alerts": {
+      "wind_level": "level_2",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 37,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:33.231314",
+    "event_time": "2025-09-22T15:33:49.762334",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 21.5,
+      "windspeed": 4.3,
+      "winddirection": 42
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 38,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:33.248313",
+    "event_time": "2025-09-22T15:33:49.769292",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 14.4,
+      "windspeed": 12.6,
+      "winddirection": 270
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 39,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:33.281328",
+    "event_time": "2025-09-22T15:33:49.777309",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 21.9,
+      "windspeed": 18.9,
+      "winddirection": 9
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 40,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:33.297313",
+    "event_time": "2025-09-22T15:35:43.115190",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 21.5,
+      "windspeed": 4.3,
+      "winddirection": 42
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 41,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:33.315315",
+    "event_time": "2025-09-22T15:35:43.126403",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 14.4,
+      "windspeed": 12.6,
+      "winddirection": 270
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 42,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:33.346322",
+    "event_time": "2025-09-22T15:35:43.142402",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 21.9,
+      "windspeed": 18.9,
+      "winddirection": 9
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 43,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:33.365319",
+    "event_time": "2025-09-22T15:39:55.340287",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 27.9,
+      "windspeed": 1.8,
+      "winddirection": 307
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 44,
+      "partition": 0,
+      "source": "demo-finale-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:33.411320",
+    "event_time": "2025-09-22T15:39:57.638284",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 15.2,
+      "windspeed": 31.0,
+      "winddirection": 250
+    },
+    "alerts": {
+      "wind_level": "level_2",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 45,
+      "partition": 0,
+      "source": "demo-finale-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:33.431315",
+    "event_time": "2025-09-22T15:45:33.106095",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 28.1,
+      "windspeed": 2.1,
+      "winddirection": 301
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 46,
+      "partition": 0,
+      "source": "demo-finale-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:33.499905",
+    "event_time": "2025-09-22T15:45:35.368269",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 15.1,
+      "windspeed": 31.0,
+      "winddirection": 250
+    },
+    "alerts": {
+      "wind_level": "level_2",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 47,
+      "partition": 0,
+      "source": "demo-finale-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:27.354307",
+    "event_time": "2025-09-22T15:29:35.612034",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 26.9,
+      "windspeed": 18.9,
+      "winddirection": 211
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 34,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:27.454305",
+    "event_time": "2025-09-22T15:29:35.894723",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 15.0,
+      "windspeed": 20.2,
+      "winddirection": 268
+    },
+    "alerts": {
+      "wind_level": "level_2",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 35,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:27.619306",
+    "event_time": "2025-09-22T15:30:28.801384",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 28.5,
+      "windspeed": 4.7,
+      "winddirection": 67
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 36,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:27.702309",
+    "event_time": "2025-09-22T15:30:31.981727",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 12.9,
+      "windspeed": 20.5,
+      "winddirection": 148
+    },
+    "alerts": {
+      "wind_level": "level_2",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 37,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:27.771531",
+    "event_time": "2025-09-22T15:33:49.762334",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 21.5,
+      "windspeed": 4.3,
+      "winddirection": 42
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 38,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:27.803635",
+    "event_time": "2025-09-22T15:33:49.769292",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 14.4,
+      "windspeed": 12.6,
+      "winddirection": 270
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 39,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:27.837746",
+    "event_time": "2025-09-22T15:33:49.777309",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 21.9,
+      "windspeed": 18.9,
+      "winddirection": 9
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 40,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:27.875577",
+    "event_time": "2025-09-22T15:35:43.115190",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 21.5,
+      "windspeed": 4.3,
+      "winddirection": 42
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 41,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:27.921062",
+    "event_time": "2025-09-22T15:35:43.126403",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 14.4,
+      "windspeed": 12.6,
+      "winddirection": 270
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 42,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:28.049943",
+    "event_time": "2025-09-22T15:35:43.142402",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 21.9,
+      "windspeed": 18.9,
+      "winddirection": 9
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 43,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:28.070909",
+    "event_time": "2025-09-22T15:39:55.340287",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 27.9,
+      "windspeed": 1.8,
+      "winddirection": 307
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 44,
+      "partition": 0,
+      "source": "demo-finale-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:28.103907",
+    "event_time": "2025-09-22T15:39:57.638284",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 15.2,
+      "windspeed": 31.0,
+      "winddirection": 250
+    },
+    "alerts": {
+      "wind_level": "level_2",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 45,
+      "partition": 0,
+      "source": "demo-finale-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:28.137282",
+    "event_time": "2025-09-22T15:45:33.106095",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 28.1,
+      "windspeed": 2.1,
+      "winddirection": 301
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 46,
+      "partition": 0,
+      "source": "demo-finale-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:28.184283",
+    "event_time": "2025-09-22T15:45:35.368269",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 15.1,
+      "windspeed": 31.0,
+      "winddirection": 250
+    },
+    "alerts": {
+      "wind_level": "level_2",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 47,
+      "partition": 0,
+      "source": "demo-finale-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.301703",
+    "event_time": "2025-09-22T15:29:35.612034",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 26.9,
+      "windspeed": 18.9,
+      "winddirection": 211
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 34,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.318705",
+    "event_time": "2025-09-22T15:29:35.894723",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 15.0,
+      "windspeed": 20.2,
+      "winddirection": 268
+    },
+    "alerts": {
+      "wind_level": "level_2",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 35,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.350706",
+    "event_time": "2025-09-22T15:30:28.801384",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 28.5,
+      "windspeed": 4.7,
+      "winddirection": 67
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 36,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.384704",
+    "event_time": "2025-09-22T15:30:31.981727",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 12.9,
+      "windspeed": 20.5,
+      "winddirection": 148
+    },
+    "alerts": {
+      "wind_level": "level_2",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 37,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.415708",
+    "event_time": "2025-09-22T15:33:49.762334",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 21.5,
+      "windspeed": 4.3,
+      "winddirection": 42
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 38,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.427751",
+    "event_time": "2025-09-22T15:33:49.769292",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 14.4,
+      "windspeed": 12.6,
+      "winddirection": 270
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 39,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.448720",
+    "event_time": "2025-09-22T15:33:49.777309",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 21.9,
+      "windspeed": 18.9,
+      "winddirection": 9
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 40,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.467705",
+    "event_time": "2025-09-22T15:35:43.115190",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 21.5,
+      "windspeed": 4.3,
+      "winddirection": 42
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 41,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.484703",
+    "event_time": "2025-09-22T15:35:43.126403",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 14.4,
+      "windspeed": 12.6,
+      "winddirection": 270
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 42,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.500701",
+    "event_time": "2025-09-22T15:35:43.142402",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 21.9,
+      "windspeed": 18.9,
+      "winddirection": 9
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 43,
+      "partition": 0,
+      "source": "pipeline-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.518703",
+    "event_time": "2025-09-22T15:39:55.340287",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 27.9,
+      "windspeed": 1.8,
+      "winddirection": 307
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 44,
+      "partition": 0,
+      "source": "demo-finale-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.539713",
+    "event_time": "2025-09-22T15:39:57.638284",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 15.2,
+      "windspeed": 31.0,
+      "winddirection": 250
+    },
+    "alerts": {
+      "wind_level": "level_2",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 45,
+      "partition": 0,
+      "source": "demo-finale-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.563765",
+    "event_time": "2025-09-22T15:45:33.106095",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 28.1,
+      "windspeed": 2.1,
+      "winddirection": 301
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 46,
+      "partition": 0,
+      "source": "demo-finale-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.583704",
+    "event_time": "2025-09-22T15:45:35.368269",
+    "location": {
+      "country": "UNKNOWN",
+      "city": "Unknown_Location",
+      "country_full": "Inconnu"
+    },
+    "weather": {
+      "temperature": 15.1,
+      "windspeed": 31.0,
+      "winddirection": 250
+    },
+    "alerts": {
+      "wind_level": "level_2",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 47,
+      "partition": 0,
+      "source": "demo-finale-transformer"
+    }
+  }
+]

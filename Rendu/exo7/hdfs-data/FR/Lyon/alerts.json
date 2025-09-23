@@ -1,0 +1,462 @@
+[
+  {
+    "timestamp": "2025-09-22T16:13:50.444609",
+    "event_time": "2025-09-22T15:08:49.555489",
+    "location": {
+      "country": "FR",
+      "city": "Lyon",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 15.7,
+      "windspeed": 5.5,
+      "winddirection": 11
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 2,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:50.515497",
+    "event_time": "2025-09-22T15:12:25.973262",
+    "location": {
+      "country": "FR",
+      "city": "Lyon",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 15.7,
+      "windspeed": 5.5,
+      "winddirection": 11
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 7,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:50.664333",
+    "event_time": "2025-09-22T15:18:31.753875",
+    "location": {
+      "country": "FR",
+      "city": "Lyon",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 15.7,
+      "windspeed": 5.5,
+      "winddirection": 11
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 12,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.090369",
+    "event_time": "2025-09-22T15:23:02.733417",
+    "location": {
+      "country": "FR",
+      "city": "Lyon",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 15.7,
+      "windspeed": 5.5,
+      "winddirection": 11
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 18,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.281886",
+    "event_time": "2025-09-22T15:29:35.126623",
+    "location": {
+      "country": "FR",
+      "city": "Lyon",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 15.7,
+      "windspeed": 5.5,
+      "winddirection": 11
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 27,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:31.883036",
+    "event_time": "2025-09-22T15:08:49.555489",
+    "location": {
+      "country": "FR",
+      "city": "Lyon",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 15.7,
+      "windspeed": 5.5,
+      "winddirection": 11
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 2,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:32.105135",
+    "event_time": "2025-09-22T15:12:25.973262",
+    "location": {
+      "country": "FR",
+      "city": "Lyon",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 15.7,
+      "windspeed": 5.5,
+      "winddirection": 11
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 7,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:32.330569",
+    "event_time": "2025-09-22T15:18:31.753875",
+    "location": {
+      "country": "FR",
+      "city": "Lyon",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 15.7,
+      "windspeed": 5.5,
+      "winddirection": 11
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 12,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:32.465826",
+    "event_time": "2025-09-22T15:23:02.733417",
+    "location": {
+      "country": "FR",
+      "city": "Lyon",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 15.7,
+      "windspeed": 5.5,
+      "winddirection": 11
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 18,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:32.864471",
+    "event_time": "2025-09-22T15:29:35.126623",
+    "location": {
+      "country": "FR",
+      "city": "Lyon",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 15.7,
+      "windspeed": 5.5,
+      "winddirection": 11
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 27,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:26.572598",
+    "event_time": "2025-09-22T15:08:49.555489",
+    "location": {
+      "country": "FR",
+      "city": "Lyon",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 15.7,
+      "windspeed": 5.5,
+      "winddirection": 11
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 2,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:26.703612",
+    "event_time": "2025-09-22T15:12:25.973262",
+    "location": {
+      "country": "FR",
+      "city": "Lyon",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 15.7,
+      "windspeed": 5.5,
+      "winddirection": 11
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 7,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:26.787597",
+    "event_time": "2025-09-22T15:18:31.753875",
+    "location": {
+      "country": "FR",
+      "city": "Lyon",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 15.7,
+      "windspeed": 5.5,
+      "winddirection": 11
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 12,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:26.874304",
+    "event_time": "2025-09-22T15:23:02.733417",
+    "location": {
+      "country": "FR",
+      "city": "Lyon",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 15.7,
+      "windspeed": 5.5,
+      "winddirection": 11
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 18,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:27.020312",
+    "event_time": "2025-09-22T15:29:35.126623",
+    "location": {
+      "country": "FR",
+      "city": "Lyon",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 15.7,
+      "windspeed": 5.5,
+      "winddirection": 11
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 27,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:12.778767",
+    "event_time": "2025-09-22T15:08:49.555489",
+    "location": {
+      "country": "FR",
+      "city": "Lyon",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 15.7,
+      "windspeed": 5.5,
+      "winddirection": 11
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 2,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:12.866713",
+    "event_time": "2025-09-22T15:12:25.973262",
+    "location": {
+      "country": "FR",
+      "city": "Lyon",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 15.7,
+      "windspeed": 5.5,
+      "winddirection": 11
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 7,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:12.933703",
+    "event_time": "2025-09-22T15:18:31.753875",
+    "location": {
+      "country": "FR",
+      "city": "Lyon",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 15.7,
+      "windspeed": 5.5,
+      "winddirection": 11
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 12,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.034703",
+    "event_time": "2025-09-22T15:23:02.733417",
+    "location": {
+      "country": "FR",
+      "city": "Lyon",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 15.7,
+      "windspeed": 5.5,
+      "winddirection": 11
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 18,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.150703",
+    "event_time": "2025-09-22T15:29:35.126623",
+    "location": {
+      "country": "FR",
+      "city": "Lyon",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 15.7,
+      "windspeed": 5.5,
+      "winddirection": 11
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 27,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  }
+]

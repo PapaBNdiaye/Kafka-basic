@@ -1,0 +1,186 @@
+[
+  {
+    "timestamp": "2025-09-22T16:13:51.197333",
+    "event_time": "2025-09-22T15:23:02.776419",
+    "location": {
+      "country": "ES",
+      "city": "Madrid",
+      "country_full": "Espagne"
+    },
+    "weather": {
+      "temperature": 20.1,
+      "windspeed": 4.0,
+      "winddirection": 265
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 22,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.347885",
+    "event_time": "2025-09-22T15:29:35.322250",
+    "location": {
+      "country": "ES",
+      "city": "Madrid",
+      "country_full": "Espagne"
+    },
+    "weather": {
+      "temperature": 20.1,
+      "windspeed": 4.0,
+      "winddirection": 265
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 31,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:32.739496",
+    "event_time": "2025-09-22T15:23:02.776419",
+    "location": {
+      "country": "ES",
+      "city": "Madrid",
+      "country_full": "Espagne"
+    },
+    "weather": {
+      "temperature": 20.1,
+      "windspeed": 4.0,
+      "winddirection": 265
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 22,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:32.995317",
+    "event_time": "2025-09-22T15:29:35.322250",
+    "location": {
+      "country": "ES",
+      "city": "Madrid",
+      "country_full": "Espagne"
+    },
+    "weather": {
+      "temperature": 20.1,
+      "windspeed": 4.0,
+      "winddirection": 265
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 31,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:26.952307",
+    "event_time": "2025-09-22T15:23:02.776419",
+    "location": {
+      "country": "ES",
+      "city": "Madrid",
+      "country_full": "Espagne"
+    },
+    "weather": {
+      "temperature": 20.1,
+      "windspeed": 4.0,
+      "winddirection": 265
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 22,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:27.089302",
+    "event_time": "2025-09-22T15:29:35.322250",
+    "location": {
+      "country": "ES",
+      "city": "Madrid",
+      "country_full": "Espagne"
+    },
+    "weather": {
+      "temperature": 20.1,
+      "windspeed": 4.0,
+      "winddirection": 265
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 31,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.085703",
+    "event_time": "2025-09-22T15:23:02.776419",
+    "location": {
+      "country": "ES",
+      "city": "Madrid",
+      "country_full": "Espagne"
+    },
+    "weather": {
+      "temperature": 20.1,
+      "windspeed": 4.0,
+      "winddirection": 265
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 22,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.252703",
+    "event_time": "2025-09-22T15:29:35.322250",
+    "location": {
+      "country": "ES",
+      "city": "Madrid",
+      "country_full": "Espagne"
+    },
+    "weather": {
+      "temperature": 20.1,
+      "windspeed": 4.0,
+      "winddirection": 265
+    },
+    "alerts": {
+      "wind_level": "level_0",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 31,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  }
+]

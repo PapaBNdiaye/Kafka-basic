@@ -1,0 +1,278 @@
+[
+  {
+    "timestamp": "2025-09-22T16:13:50.847334",
+    "event_time": "2025-09-22T15:18:31.855967",
+    "location": {
+      "country": "BE",
+      "city": "Bruxelles",
+      "country_full": "Belgique"
+    },
+    "weather": {
+      "temperature": 17.1,
+      "windspeed": 19.1,
+      "winddirection": 33
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 15,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.180331",
+    "event_time": "2025-09-22T15:23:02.764418",
+    "location": {
+      "country": "BE",
+      "city": "Bruxelles",
+      "country_full": "Belgique"
+    },
+    "weather": {
+      "temperature": 17.1,
+      "windspeed": 19.1,
+      "winddirection": 33
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 21,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.335922",
+    "event_time": "2025-09-22T15:29:35.228236",
+    "location": {
+      "country": "BE",
+      "city": "Bruxelles",
+      "country_full": "Belgique"
+    },
+    "weather": {
+      "temperature": 17.1,
+      "windspeed": 19.1,
+      "winddirection": 33
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 30,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:32.415501",
+    "event_time": "2025-09-22T15:18:31.855967",
+    "location": {
+      "country": "BE",
+      "city": "Bruxelles",
+      "country_full": "Belgique"
+    },
+    "weather": {
+      "temperature": 17.1,
+      "windspeed": 19.1,
+      "winddirection": 33
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 15,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:32.720468",
+    "event_time": "2025-09-22T15:23:02.764418",
+    "location": {
+      "country": "BE",
+      "city": "Bruxelles",
+      "country_full": "Belgique"
+    },
+    "weather": {
+      "temperature": 17.1,
+      "windspeed": 19.1,
+      "winddirection": 33
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 21,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:32.946312",
+    "event_time": "2025-09-22T15:29:35.228236",
+    "location": {
+      "country": "BE",
+      "city": "Bruxelles",
+      "country_full": "Belgique"
+    },
+    "weather": {
+      "temperature": 17.1,
+      "windspeed": 19.1,
+      "winddirection": 33
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 30,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:26.837303",
+    "event_time": "2025-09-22T15:18:31.855967",
+    "location": {
+      "country": "BE",
+      "city": "Bruxelles",
+      "country_full": "Belgique"
+    },
+    "weather": {
+      "temperature": 17.1,
+      "windspeed": 19.1,
+      "winddirection": 33
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 15,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:26.927303",
+    "event_time": "2025-09-22T15:23:02.764418",
+    "location": {
+      "country": "BE",
+      "city": "Bruxelles",
+      "country_full": "Belgique"
+    },
+    "weather": {
+      "temperature": 17.1,
+      "windspeed": 19.1,
+      "winddirection": 33
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 21,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:27.070313",
+    "event_time": "2025-09-22T15:29:35.228236",
+    "location": {
+      "country": "BE",
+      "city": "Bruxelles",
+      "country_full": "Belgique"
+    },
+    "weather": {
+      "temperature": 17.1,
+      "windspeed": 19.1,
+      "winddirection": 33
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 30,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:12.985706",
+    "event_time": "2025-09-22T15:18:31.855967",
+    "location": {
+      "country": "BE",
+      "city": "Bruxelles",
+      "country_full": "Belgique"
+    },
+    "weather": {
+      "temperature": 17.1,
+      "windspeed": 19.1,
+      "winddirection": 33
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 15,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.081711",
+    "event_time": "2025-09-22T15:23:02.764418",
+    "location": {
+      "country": "BE",
+      "city": "Bruxelles",
+      "country_full": "Belgique"
+    },
+    "weather": {
+      "temperature": 17.1,
+      "windspeed": 19.1,
+      "winddirection": 33
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 21,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.242725",
+    "event_time": "2025-09-22T15:29:35.228236",
+    "location": {
+      "country": "BE",
+      "city": "Bruxelles",
+      "country_full": "Belgique"
+    },
+    "weather": {
+      "temperature": 17.1,
+      "windspeed": 19.1,
+      "winddirection": 33
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 30,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  }
+]

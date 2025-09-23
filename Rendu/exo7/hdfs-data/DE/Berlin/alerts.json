@@ -1,0 +1,186 @@
+[
+  {
+    "timestamp": "2025-09-22T16:13:51.217478",
+    "event_time": "2025-09-22T15:23:02.796425",
+    "location": {
+      "country": "DE",
+      "city": "Berlin",
+      "country_full": "Allemagne"
+    },
+    "weather": {
+      "temperature": 15.2,
+      "windspeed": 11.3,
+      "winddirection": 343
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 23,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.369889",
+    "event_time": "2025-09-22T15:29:35.398287",
+    "location": {
+      "country": "DE",
+      "city": "Berlin",
+      "country_full": "Allemagne"
+    },
+    "weather": {
+      "temperature": 15.2,
+      "windspeed": 11.3,
+      "winddirection": 343
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 32,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:32.765464",
+    "event_time": "2025-09-22T15:23:02.796425",
+    "location": {
+      "country": "DE",
+      "city": "Berlin",
+      "country_full": "Allemagne"
+    },
+    "weather": {
+      "temperature": 15.2,
+      "windspeed": 11.3,
+      "winddirection": 343
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 23,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:33.015317",
+    "event_time": "2025-09-22T15:29:35.398287",
+    "location": {
+      "country": "DE",
+      "city": "Berlin",
+      "country_full": "Allemagne"
+    },
+    "weather": {
+      "temperature": 15.2,
+      "windspeed": 11.3,
+      "winddirection": 343
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 32,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:26.955302",
+    "event_time": "2025-09-22T15:23:02.796425",
+    "location": {
+      "country": "DE",
+      "city": "Berlin",
+      "country_full": "Allemagne"
+    },
+    "weather": {
+      "temperature": 15.2,
+      "windspeed": 11.3,
+      "winddirection": 343
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 23,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:27.205304",
+    "event_time": "2025-09-22T15:29:35.398287",
+    "location": {
+      "country": "DE",
+      "city": "Berlin",
+      "country_full": "Allemagne"
+    },
+    "weather": {
+      "temperature": 15.2,
+      "windspeed": 11.3,
+      "winddirection": 343
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 32,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.100705",
+    "event_time": "2025-09-22T15:23:02.796425",
+    "location": {
+      "country": "DE",
+      "city": "Berlin",
+      "country_full": "Allemagne"
+    },
+    "weather": {
+      "temperature": 15.2,
+      "windspeed": 11.3,
+      "winddirection": 343
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 23,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.268705",
+    "event_time": "2025-09-22T15:29:35.398287",
+    "location": {
+      "country": "DE",
+      "city": "Berlin",
+      "country_full": "Allemagne"
+    },
+    "weather": {
+      "temperature": 15.2,
+      "windspeed": 11.3,
+      "winddirection": 343
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 32,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  }
+]

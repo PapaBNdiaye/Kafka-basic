@@ -1,0 +1,186 @@
+[
+  {
+    "timestamp": "2025-09-22T16:13:51.229889",
+    "event_time": "2025-09-22T15:23:02.807433",
+    "location": {
+      "country": "IT",
+      "city": "Rome",
+      "country_full": "Italie"
+    },
+    "weather": {
+      "temperature": 27.6,
+      "windspeed": 16.6,
+      "winddirection": 181
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 24,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.462568",
+    "event_time": "2025-09-22T15:29:35.438797",
+    "location": {
+      "country": "IT",
+      "city": "Rome",
+      "country_full": "Italie"
+    },
+    "weather": {
+      "temperature": 27.6,
+      "windspeed": 16.6,
+      "winddirection": 181
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 33,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:32.784510",
+    "event_time": "2025-09-22T15:23:02.807433",
+    "location": {
+      "country": "IT",
+      "city": "Rome",
+      "country_full": "Italie"
+    },
+    "weather": {
+      "temperature": 27.6,
+      "windspeed": 16.6,
+      "winddirection": 181
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 24,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:33.048314",
+    "event_time": "2025-09-22T15:29:35.438797",
+    "location": {
+      "country": "IT",
+      "city": "Rome",
+      "country_full": "Italie"
+    },
+    "weather": {
+      "temperature": 27.6,
+      "windspeed": 16.6,
+      "winddirection": 181
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 33,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:26.970304",
+    "event_time": "2025-09-22T15:23:02.807433",
+    "location": {
+      "country": "IT",
+      "city": "Rome",
+      "country_full": "Italie"
+    },
+    "weather": {
+      "temperature": 27.6,
+      "windspeed": 16.6,
+      "winddirection": 181
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 24,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:27.289306",
+    "event_time": "2025-09-22T15:29:35.438797",
+    "location": {
+      "country": "IT",
+      "city": "Rome",
+      "country_full": "Italie"
+    },
+    "weather": {
+      "temperature": 27.6,
+      "windspeed": 16.6,
+      "winddirection": 181
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 33,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.108711",
+    "event_time": "2025-09-22T15:23:02.807433",
+    "location": {
+      "country": "IT",
+      "city": "Rome",
+      "country_full": "Italie"
+    },
+    "weather": {
+      "temperature": 27.6,
+      "windspeed": 16.6,
+      "winddirection": 181
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 24,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.284702",
+    "event_time": "2025-09-22T15:29:35.438797",
+    "location": {
+      "country": "IT",
+      "city": "Rome",
+      "country_full": "Italie"
+    },
+    "weather": {
+      "temperature": 27.6,
+      "windspeed": 16.6,
+      "winddirection": 181
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_1"
+    },
+    "kafka_metadata": {
+      "offset": 33,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  }
+]

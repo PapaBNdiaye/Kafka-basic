@@ -1,0 +1,922 @@
+[
+  {
+    "timestamp": "2025-09-22T16:13:50.432124",
+    "event_time": "2025-09-22T15:08:49.546505",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 1,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:50.464783",
+    "event_time": "2025-09-22T15:08:49.592501",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 4,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:50.497018",
+    "event_time": "2025-09-22T15:12:25.956737",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 6,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:50.597336",
+    "event_time": "2025-09-22T15:12:26.004263",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 9,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:50.644333",
+    "event_time": "2025-09-22T15:18:31.681687",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 11,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:50.795332",
+    "event_time": "2025-09-22T15:18:31.835987",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 14,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:50.914334",
+    "event_time": "2025-09-22T15:23:02.723417",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 17,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.162336",
+    "event_time": "2025-09-22T15:23:02.750422",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 20,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.261885",
+    "event_time": "2025-09-22T15:29:35.118624",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 26,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:13:51.325957",
+    "event_time": "2025-09-22T15:29:35.170240",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 29,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:31.766198",
+    "event_time": "2025-09-22T15:08:49.546505",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 1,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:31.965091",
+    "event_time": "2025-09-22T15:08:49.592501",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 4,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:32.079858",
+    "event_time": "2025-09-22T15:12:25.956737",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 6,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:32.199876",
+    "event_time": "2025-09-22T15:12:26.004263",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 9,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:32.312549",
+    "event_time": "2025-09-22T15:18:31.681687",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 11,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:32.386523",
+    "event_time": "2025-09-22T15:18:31.835987",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 14,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:32.447850",
+    "event_time": "2025-09-22T15:23:02.723417",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 17,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:32.660513",
+    "event_time": "2025-09-22T15:23:02.750422",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 20,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:32.831461",
+    "event_time": "2025-09-22T15:29:35.118624",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 26,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:16:32.914464",
+    "event_time": "2025-09-22T15:29:35.170240",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 29,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:26.554413",
+    "event_time": "2025-09-22T15:08:49.546505",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 1,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:26.621598",
+    "event_time": "2025-09-22T15:08:49.592501",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 4,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:26.687600",
+    "event_time": "2025-09-22T15:12:25.956737",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 6,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:26.735601",
+    "event_time": "2025-09-22T15:12:26.004263",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 9,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:26.767644",
+    "event_time": "2025-09-22T15:18:31.681687",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 11,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:26.821322",
+    "event_time": "2025-09-22T15:18:31.835987",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 14,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:26.860308",
+    "event_time": "2025-09-22T15:23:02.723417",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 17,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:26.905306",
+    "event_time": "2025-09-22T15:23:02.750422",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 20,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:26.993310",
+    "event_time": "2025-09-22T15:29:35.118624",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 26,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:19:27.054304",
+    "event_time": "2025-09-22T15:29:35.170240",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 29,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:12.761768",
+    "event_time": "2025-09-22T15:08:49.546505",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 1,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:12.804710",
+    "event_time": "2025-09-22T15:08:49.592501",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 4,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:12.849710",
+    "event_time": "2025-09-22T15:12:25.956737",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 6,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:12.885702",
+    "event_time": "2025-09-22T15:12:26.004263",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 9,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:12.917703",
+    "event_time": "2025-09-22T15:18:31.681687",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 11,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:12.966704",
+    "event_time": "2025-09-22T15:18:31.835987",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 14,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.018702",
+    "event_time": "2025-09-22T15:23:02.723417",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 17,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.062744",
+    "event_time": "2025-09-22T15:23:02.750422",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 20,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.134705",
+    "event_time": "2025-09-22T15:29:35.118624",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 26,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  },
+  {
+    "timestamp": "2025-09-22T16:22:13.213730",
+    "event_time": "2025-09-22T15:29:35.170240",
+    "location": {
+      "country": "FR",
+      "city": "Toulouse",
+      "country_full": "France"
+    },
+    "weather": {
+      "temperature": 18.0,
+      "windspeed": 16.0,
+      "winddirection": 284
+    },
+    "alerts": {
+      "wind_level": "level_1",
+      "heat_level": "level_0"
+    },
+    "kafka_metadata": {
+      "offset": 29,
+      "partition": 0,
+      "source": "spark-transformer"
+    }
+  }
+]

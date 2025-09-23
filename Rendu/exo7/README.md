@@ -69,6 +69,13 @@ weather_transformed → Consommateur HDFS → Structure organisée par pays/vill
 4. Compatibilité : Fonctionne avec données des exercices 4-6
 5. Flexibilité : HDFS réel ou simulation selon environnement
 
+## Données d'exemple
+Le dossier `hdfs-data/` contient des données d'exemple générées par le système :
+- Structure organisée par pays/ville
+- Fichiers `alerts.json` avec données météo et alertes
+- 8 villes dans 6 pays (FR, ES, IT, DE, BE, UNKNOWN)
+- Données prêtes pour l'exercice 8 (visualisation)
+
 ## Prérequis
 - Python 3.x avec environnement virtuel
 - Dépendances : kafka-python, hdfs3
