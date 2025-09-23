@@ -1,0 +1,22 @@
+# Dépendances Python pour tous les exercices Kafka
+# Exercice 2 et 3 : Client Kafka Python
+kafka-python==2.2.15
+
+# Exercice 4 et 5 : Spark Streaming pour transformation et agrégats
+pyspark==4.0.1
+py4j==0.10.9.9
+
+# Exercice 3 et 6 : Requêtes HTTP pour API Open-Meteo et géocodage
+requests==2.32.5
+
+# Exercice 7 : Stockage HDFS
+hdfs3==0.3.1
+hdfs==2.7.3
+docopt==0.6.2
+six==1.17.0
+
+# Exercice 8 : Visualisation et analyse
+matplotlib==3.9.4
+pandas==2.3.2
+seaborn==0.13.2
+numpy==2.0.2
