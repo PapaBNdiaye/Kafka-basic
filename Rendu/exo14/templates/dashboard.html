@@ -1,0 +1,342 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard Temps Réel - Weather Dashboard{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1 class="display-5 mb-4">
+            <i class="fas fa-bolt"></i> Dashboard Temps Réel
+        </h1>
+    </div>
+</div>
+
+<!-- Métriques temps réel -->
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card bg-primary text-white">
+            <div class="card-body">
+                <h5 class="card-title">Température</h5>
+                <h2 id="current-temp">--°C</h2>
+                <small id="temp-city">--</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-info text-white">
+            <div class="card-body">
+                <h5 class="card-title">Vent</h5>
+                <h2 id="current-wind">-- km/h</h2>
+                <small id="wind-city">--</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-success text-white">
+            <div class="card-body">
+                <h5 class="card-title">Précipitations</h5>
+                <h2 id="current-precip">-- mm</h2>
+                <small id="precip-city">--</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-warning text-white">
+            <div class="card-body">
+                <h5 class="card-title">Dernière mise à jour</h5>
+                <h6 id="last-update">--</h6>
+                <small>Données en temps réel</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Graphiques -->
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Évolution Température</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="tempChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Évolution Vent</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="windChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tableau des données récentes -->
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5>Données récentes</h5>
+                <span class="badge bg-primary" id="data-count">0 messages</span>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Ville</th>
+                                <th>Pays</th>
+                                <th>Température</th>
+                                <th>Vent</th>
+                                <th>Précipitations</th>
+                                <th>Timestamp</th>
+                            </tr>
+                        </thead>
+                        <tbody id="realtime-table">
+                            <tr>
+                                <td colspan="6" class="text-center text-muted">
+                                    Aucune donnée disponible
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contrôles -->
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Contrôles</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <button class="btn btn-primary" onclick="startRealTimeUpdates()">
+                            <i class="fas fa-play"></i> Démarrer les mises à jour
+                        </button>
+                        <button class="btn btn-secondary" onclick="stopRealTimeUpdates()">
+                            <i class="fas fa-pause"></i> Pause
+                        </button>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="update-interval">Intervalle de mise à jour (s)</label>
+                            <select class="form-control" id="update-interval" onchange="changeUpdateInterval()">
+                                <option value="1">1 seconde</option>
+                                <option value="5" selected>5 secondes</option>
+                                <option value="10">10 secondes</option>
+                                <option value="30">30 secondes</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="city-filter">Filtrer par ville</label>
+                            <select class="form-control" id="city-filter" onchange="filterByCity()">
+                                <option value="">Toutes les villes</option>
+                                <option value="Paris">Paris</option>
+                                <option value="Lyon">Lyon</option>
+                                <option value="Berlin">Berlin</option>
+                                <option value="Madrid">Madrid</option>
+                                <option value="Rome">Rome</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let tempChart, windChart;
+let updateInterval = 5000; // 5 secondes par défaut
+let updateTimer = null;
+let realtimeData = [];
+
+// Initialisation des graphiques
+function initCharts() {
+    // Graphique température
+    const tempCtx = document.getElementById('tempChart').getContext('2d');
+    tempChart = new Chart(tempCtx, {
+        type: 'line',
+        data: {
+            labels: [],
+            datasets: [{
+                label: 'Température (°C)',
+                data: [],
+                borderColor: 'rgb(75, 192, 192)',
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                tension: 0.1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: false
+                }
+            }
+        }
+    });
+
+    // Graphique vent
+    const windCtx = document.getElementById('windChart').getContext('2d');
+    windChart = new Chart(windCtx, {
+        type: 'line',
+        data: {
+            labels: [],
+            datasets: [{
+                label: 'Vitesse vent (km/h)',
+                data: [],
+                borderColor: 'rgb(255, 99, 132)',
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                tension: 0.1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+
+// Mise à jour des données temps réel
+function updateRealtimeData() {
+    fetch('/api/realtime')
+        .then(response => response.json())
+        .then(data => {
+            realtimeData = data.data;
+            
+            // Mise à jour des métriques
+            if (realtimeData.length > 0) {
+                const latest = realtimeData[realtimeData.length - 1];
+                document.getElementById('current-temp').textContent = 
+                    latest.temperature ? latest.temperature.toFixed(1) + '°C' : '--°C';
+                document.getElementById('current-wind').textContent = 
+                    latest.windspeed ? latest.windspeed.toFixed(1) + ' km/h' : '-- km/h';
+                document.getElementById('current-precip').textContent = 
+                    latest.precipitation ? latest.precipitation.toFixed(1) + ' mm' : '-- mm';
+                
+                document.getElementById('temp-city').textContent = latest.city || '--';
+                document.getElementById('wind-city').textContent = latest.city || '--';
+                document.getElementById('precip-city').textContent = latest.city || '--';
+                
+                document.getElementById('last-update').textContent = 
+                    new Date(latest.kafka_timestamp || latest.timestamp).toLocaleTimeString();
+            }
+            
+            // Mise à jour des graphiques
+            updateCharts();
+            
+            // Mise à jour du tableau
+            updateTable();
+            
+            // Mise à jour du compteur
+            document.getElementById('data-count').textContent = realtimeData.length + ' messages';
+        })
+        .catch(error => {
+            console.error('Erreur lors de la mise à jour des données:', error);
+        });
+}
+
+// Mise à jour des graphiques
+function updateCharts() {
+    const labels = [];
+    const tempData = [];
+    const windData = [];
+    
+    realtimeData.slice(-20).forEach(item => {
+        const time = new Date(item.kafka_timestamp || item.timestamp).toLocaleTimeString();
+        labels.push(time);
+        tempData.push(item.temperature || 0);
+        windData.push(item.windspeed || 0);
+    });
+    
+    // Mise à jour graphique température
+    tempChart.data.labels = labels;
+    tempChart.data.datasets[0].data = tempData;
+    tempChart.update();
+    
+    // Mise à jour graphique vent
+    windChart.data.labels = labels;
+    windChart.data.datasets[0].data = windData;
+    windChart.update();
+}
+
+// Mise à jour du tableau
+function updateTable() {
+    const tbody = document.getElementById('realtime-table');
+    const cityFilter = document.getElementById('city-filter').value;
+    
+    let filteredData = realtimeData;
+    if (cityFilter) {
+        filteredData = realtimeData.filter(item => item.city === cityFilter);
+    }
+    
+    if (filteredData.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="6" class="text-center text-muted">Aucune donnée disponible</td></tr>';
+        return;
+    }
+    
+    tbody.innerHTML = filteredData.slice(-10).map(item => `
+        <tr>
+            <td>${item.city || '--'}</td>
+            <td>${item.country || '--'}</td>
+            <td>${item.temperature ? item.temperature.toFixed(1) + '°C' : '--'}</td>
+            <td>${item.windspeed ? item.windspeed.toFixed(1) + ' km/h' : '--'}</td>
+            <td>${item.precipitation ? item.precipitation.toFixed(1) + ' mm' : '--'}</td>
+            <td>${new Date(item.kafka_timestamp || item.timestamp).toLocaleString()}</td>
+        </tr>
+    `).join('');
+}
+
+// Contrôles
+function startRealTimeUpdates() {
+    if (updateTimer) {
+        clearInterval(updateTimer);
+    }
+    updateTimer = setInterval(updateRealtimeData, updateInterval);
+    updateRealtimeData(); // Premier appel
+}
+
+function stopRealTimeUpdates() {
+    if (updateTimer) {
+        clearInterval(updateTimer);
+        updateTimer = null;
+    }
+}
+
+function changeUpdateInterval() {
+    updateInterval = parseInt(document.getElementById('update-interval').value) * 1000;
+    if (updateTimer) {
+        startRealTimeUpdates();
+    }
+}
+
+function filterByCity() {
+    updateTable();
+}
+
+// Initialisation
+document.addEventListener('DOMContentLoaded', function() {
+    initCharts();
+    startRealTimeUpdates();
+});
+</script>
+{% endblock %}

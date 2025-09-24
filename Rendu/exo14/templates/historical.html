@@ -1,0 +1,513 @@
+{% extends "base.html" %}
+
+{% block title %}Données Historiques - Weather Dashboard{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1 class="display-5 mb-4">
+            <i class="fas fa-history"></i> Données Historiques
+        </h1>
+    </div>
+</div>
+
+<!-- Sélection de ville -->
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Sélection de ville</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="country-select">Pays</label>
+                        <select class="form-control" id="country-select" onchange="loadCities()">
+                            <option value="">Sélectionner un pays</option>
+                            <option value="France">France</option>
+                            <option value="Germany">Allemagne</option>
+                            <option value="Spain">Espagne</option>
+                            <option value="Italy">Italie</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="city-select">Ville</label>
+                        <select class="form-control" id="city-select" onchange="loadHistoricalData()" disabled>
+                            <option value="">Sélectionner une ville</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn btn-primary mt-3" onclick="loadHistoricalData()" id="load-btn" disabled>
+                    <i class="fas fa-chart-line"></i> Charger les données
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Informations</h5>
+            </div>
+            <div class="card-body">
+                <div id="city-info">
+                    <p class="text-muted">Sélectionnez une ville pour voir les statistiques</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Graphiques historiques -->
+<div class="row" id="charts-section" style="display: none;">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Évolution des températures (10 ans)</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="historicalTempChart" width="800" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4" id="precipitation-section" style="display: none;">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Évolution des précipitations (10 ans)</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="historicalPrecipChart" width="800" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Statistiques détaillées -->
+<div class="row mt-4" id="stats-section" style="display: none;">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Statistiques détaillées</h5>
+            </div>
+            <div class="card-body">
+                <div class="row" id="detailed-stats">
+                    <!-- Les statistiques seront chargées dynamiquement -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tableau des données mensuelles -->
+<div class="row mt-4" id="table-section" style="display: none;">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Données mensuelles moyennes</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Année</th>
+                                <th>Jan</th>
+                                <th>Fév</th>
+                                <th>Mar</th>
+                                <th>Avr</th>
+                                <th>Mai</th>
+                                <th>Juin</th>
+                                <th>Juil</th>
+                                <th>Août</th>
+                                <th>Sep</th>
+                                <th>Oct</th>
+                                <th>Nov</th>
+                                <th>Déc</th>
+                            </tr>
+                        </thead>
+                        <tbody id="monthly-table">
+                            <!-- Les données seront chargées dynamiquement -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Analyse saisonnière -->
+<div class="row mt-4" id="seasonal-section" style="display: none;">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Profils saisonniers - Température</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="seasonalTempChart" width="400" height="300"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Profils saisonniers - Précipitations</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="seasonalPrecipChart" width="400" height="300"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let historicalTempChart, historicalPrecipChart, seasonalTempChart, seasonalPrecipChart;
+let currentData = null;
+
+const cities = {
+    'France': ['Paris', 'Lyon'],
+    'Germany': ['Berlin'],
+    'Spain': ['Madrid'],
+    'Italy': ['Rome']
+};
+
+// Chargement des villes selon le pays sélectionné
+function loadCities() {
+    const countrySelect = document.getElementById('country-select');
+    const citySelect = document.getElementById('city-select');
+    const loadBtn = document.getElementById('load-btn');
+    
+    const selectedCountry = countrySelect.value;
+    
+    citySelect.innerHTML = '<option value="">Sélectionner une ville</option>';
+    citySelect.disabled = true;
+    loadBtn.disabled = true;
+    
+    if (selectedCountry && cities[selectedCountry]) {
+        cities[selectedCountry].forEach(city => {
+            const option = document.createElement('option');
+            option.value = city;
+            option.textContent = city;
+            citySelect.appendChild(option);
+        });
+        citySelect.disabled = false;
+    }
+}
+
+// Chargement des données historiques
+function loadHistoricalData() {
+    const country = document.getElementById('country-select').value;
+    const city = document.getElementById('city-select').value;
+    
+    if (!country || !city) {
+        alert('Veuillez sélectionner un pays et une ville');
+        return;
+    }
+    
+    // Affichage du loading
+    document.getElementById('city-info').innerHTML = '<p class="text-info">Chargement des données...</p>';
+    
+    // Simulation de chargement depuis l'API
+    setTimeout(() => {
+        // Données simulées
+        currentData = generateSimulatedHistoricalData(city, country);
+        displayHistoricalData(currentData);
+    }, 1000);
+}
+
+// Génération de données simulées
+function generateSimulatedHistoricalData(city, country) {
+    const years = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+    const months = ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sep', 'Oct', 'Nov', 'Déc'];
+    
+    const data = {
+        city: city,
+        country: country,
+        years: years,
+        monthly_stats: {
+            temperature: {},
+            precipitation: {}
+        }
+    };
+    
+    // Génération des données par mois
+    months.forEach((month, index) => {
+        data.monthly_stats.temperature[month.toLowerCase()] = [];
+        data.monthly_stats.precipitation[month.toLowerCase()] = [];
+        
+        years.forEach(() => {
+            // Température moyenne par mois (avec variation)
+            const baseTemp = 5 + index * 2 + Math.sin(index * Math.PI / 6) * 10;
+            const temp = baseTemp + (Math.random() - 0.5) * 4;
+            data.monthly_stats.temperature[month.toLowerCase()].push(Math.round(temp * 10) / 10);
+            
+            // Précipitations (avec variation)
+            const basePrecip = 30 + Math.random() * 40;
+            data.monthly_stats.precipitation[month.toLowerCase()].push(Math.round(basePrecip));
+        });
+    });
+    
+    return data;
+}
+
+// Affichage des données historiques
+function displayHistoricalData(data) {
+    // Mise à jour des informations de la ville
+    document.getElementById('city-info').innerHTML = `
+        <h6>${data.city}, ${data.country}</h6>
+        <p><strong>Période:</strong> ${data.years[0]} - ${data.years[data.years.length - 1]}</p>
+        <p><strong>Données:</strong> ${data.years.length} années</p>
+        <p><strong>Dernière mise à jour:</strong> ${new Date().toLocaleString()}</p>
+    `;
+    
+    // Affichage des sections
+    document.getElementById('charts-section').style.display = 'block';
+    document.getElementById('precipitation-section').style.display = 'block';
+    document.getElementById('stats-section').style.display = 'block';
+    document.getElementById('table-section').style.display = 'block';
+    document.getElementById('seasonal-section').style.display = 'block';
+    
+    // Initialisation des graphiques
+    initHistoricalCharts(data);
+    updateDetailedStats(data);
+    updateMonthlyTable(data);
+}
+
+// Initialisation des graphiques historiques
+function initHistoricalCharts(data) {
+    // Graphique température historique
+    const tempCtx = document.getElementById('historicalTempChart').getContext('2d');
+    if (historicalTempChart) {
+        historicalTempChart.destroy();
+    }
+    
+    const months = ['jan', 'fév', 'mar', 'avr', 'mai', 'juin', 'juil', 'août', 'sep', 'oct', 'nov', 'déc'];
+    const datasets = data.years.map((year, yearIndex) => {
+        const temps = months.map(month => data.monthly_stats.temperature[month][yearIndex]);
+        return {
+            label: year.toString(),
+            data: temps,
+            borderColor: `hsl(${yearIndex * 36}, 70%, 50%)`,
+            backgroundColor: `hsla(${yearIndex * 36}, 70%, 50%, 0.1)`,
+            tension: 0.1
+        };
+    });
+    
+    historicalTempChart = new Chart(tempCtx, {
+        type: 'line',
+        data: {
+            labels: months.map(m => m.charAt(0).toUpperCase() + m.slice(1)),
+            datasets: datasets
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: false,
+                    title: {
+                        display: true,
+                        text: 'Température (°C)'
+                    }
+                }
+            }
+        }
+    });
+    
+    // Graphique précipitations historique
+    const precipCtx = document.getElementById('historicalPrecipChart').getContext('2d');
+    if (historicalPrecipChart) {
+        historicalPrecipChart.destroy();
+    }
+    
+    const precipDatasets = data.years.map((year, yearIndex) => {
+        const precip = months.map(month => data.monthly_stats.precipitation[month][yearIndex]);
+        return {
+            label: year.toString(),
+            data: precip,
+            borderColor: `hsl(${yearIndex * 36}, 70%, 50%)`,
+            backgroundColor: `hsla(${yearIndex * 36}, 70%, 50%, 0.1)`,
+            tension: 0.1
+        };
+    });
+    
+    historicalPrecipChart = new Chart(precipCtx, {
+        type: 'line',
+        data: {
+            labels: months.map(m => m.charAt(0).toUpperCase() + m.slice(1)),
+            datasets: precipDatasets
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Précipitations (mm)'
+                    }
+                }
+            }
+        }
+    });
+    
+    // Graphiques saisonniers
+    initSeasonalCharts(data);
+}
+
+// Initialisation des graphiques saisonniers
+function initSeasonalCharts(data) {
+    const months = ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sep', 'Oct', 'Nov', 'Déc'];
+    
+    // Calcul des moyennes sur 10 ans
+    const avgTemps = months.map(month => {
+        const temps = data.monthly_stats.temperature[month.toLowerCase()];
+        return temps.reduce((sum, temp) => sum + temp, 0) / temps.length;
+    });
+    
+    const avgPrecip = months.map(month => {
+        const precip = data.monthly_stats.precipitation[month.toLowerCase()];
+        return precip.reduce((sum, p) => sum + p, 0) / precip.length;
+    });
+    
+    // Graphique température saisonnier
+    const seasonalTempCtx = document.getElementById('seasonalTempChart').getContext('2d');
+    if (seasonalTempChart) {
+        seasonalTempChart.destroy();
+    }
+    
+    seasonalTempChart = new Chart(seasonalTempCtx, {
+        type: 'bar',
+        data: {
+            labels: months,
+            datasets: [{
+                label: 'Température moyenne (°C)',
+                data: avgTemps,
+                backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: false,
+                    title: {
+                        display: true,
+                        text: 'Température (°C)'
+                    }
+                }
+            }
+        }
+    });
+    
+    // Graphique précipitations saisonnier
+    const seasonalPrecipCtx = document.getElementById('seasonalPrecipChart').getContext('2d');
+    if (seasonalPrecipChart) {
+        seasonalPrecipChart.destroy();
+    }
+    
+    seasonalPrecipChart = new Chart(seasonalPrecipCtx, {
+        type: 'bar',
+        data: {
+            labels: months,
+            datasets: [{
+                label: 'Précipitations moyennes (mm)',
+                data: avgPrecip,
+                backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Précipitations (mm)'
+                    }
+                }
+            }
+        }
+    });
+}
+
+// Mise à jour des statistiques détaillées
+function updateDetailedStats(data) {
+    const months = ['jan', 'fév', 'mar', 'avr', 'mai', 'juin', 'juil', 'août', 'sep', 'oct', 'nov', 'déc'];
+    
+    // Calcul des statistiques
+    let allTemps = [];
+    let allPrecip = [];
+    
+    months.forEach(month => {
+        allTemps = allTemps.concat(data.monthly_stats.temperature[month]);
+        allPrecip = allPrecip.concat(data.monthly_stats.precipitation[month]);
+    });
+    
+    const tempStats = calculateStats(allTemps);
+    const precipStats = calculateStats(allPrecip);
+    
+    document.getElementById('detailed-stats').innerHTML = `
+        <div class="col-md-6">
+            <h6>Température</h6>
+            <ul class="list-unstyled">
+                <li><strong>Moyenne:</strong> ${tempStats.mean.toFixed(1)}°C</li>
+                <li><strong>Minimum:</strong> ${tempStats.min.toFixed(1)}°C</li>
+                <li><strong>Maximum:</strong> ${tempStats.max.toFixed(1)}°C</li>
+                <li><strong>Écart-type:</strong> ${tempStats.std.toFixed(1)}°C</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h6>Précipitations</h6>
+            <ul class="list-unstyled">
+                <li><strong>Moyenne:</strong> ${precipStats.mean.toFixed(1)} mm</li>
+                <li><strong>Minimum:</strong> ${precipStats.min.toFixed(1)} mm</li>
+                <li><strong>Maximum:</strong> ${precipStats.max.toFixed(1)} mm</li>
+                <li><strong>Écart-type:</strong> ${precipStats.std.toFixed(1)} mm</li>
+            </ul>
+        </div>
+    `;
+}
+
+// Calcul des statistiques
+function calculateStats(values) {
+    const mean = values.reduce((sum, val) => sum + val, 0) / values.length;
+    const variance = values.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0) / values.length;
+    const std = Math.sqrt(variance);
+    const min = Math.min(...values);
+    const max = Math.max(...values);
+    
+    return { mean, std, min, max };
+}
+
+// Mise à jour du tableau mensuel
+function updateMonthlyTable(data) {
+    const tbody = document.getElementById('monthly-table');
+    const months = ['jan', 'fév', 'mar', 'avr', 'mai', 'juin', 'juil', 'août', 'sep', 'oct', 'nov', 'déc'];
+    
+    tbody.innerHTML = data.years.map((year, yearIndex) => {
+        const temps = months.map(month => 
+            data.monthly_stats.temperature[month][yearIndex].toFixed(1)
+        );
+        
+        return `
+            <tr>
+                <td><strong>${year}</strong></td>
+                ${temps.map(temp => `<td>${temp}°C</td>`).join('')}
+            </tr>
+        `;
+    }).join('');
+}
+
+// Initialisation
+document.addEventListener('DOMContentLoaded', function() {
+    // Les graphiques seront initialisés lors du chargement des données
+});
+</script>
+{% endblock %}

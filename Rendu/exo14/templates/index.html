@@ -1,0 +1,218 @@
+{% extends "base.html" %}
+
+{% block title %}Accueil - Weather Dashboard{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1 class="display-4 text-center mb-4">Weather Dashboard</h1>
+        <p class="lead text-center">Interface de visualisation des données météorologiques en temps réel et historiques</p>
+    </div>
+</div>
+
+<!-- Statut des services -->
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Statut des services</h5>
+            </div>
+            <div class="card-body">
+                <div class="row" id="service-status">
+                    <div class="col-md-4">
+                        <div class="d-flex align-items-center">
+                            <span class="status-indicator status-offline" id="kafka-status"></span>
+                            <span>Kafka</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="d-flex align-items-center">
+                            <span class="status-indicator status-offline" id="hdfs-status"></span>
+                            <span>HDFS</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="d-flex align-items-center">
+                            <span class="status-indicator status-offline" id="spark-status"></span>
+                            <span>Spark</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modules du dashboard -->
+<div class="row mt-4">
+    <div class="col-md-3 mb-4">
+        <div class="card text-white bg-primary metric-card h-100">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                    <i class="fas fa-bolt"></i> Temps réel
+                </h5>
+                <p class="card-text flex-grow-1">
+                    Visualisation des données météo en streaming depuis Kafka
+                </p>
+                <a href="/dashboard" class="btn btn-light mt-auto">Accéder au dashboard</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3 mb-4">
+        <div class="card text-white bg-info metric-card h-100">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                    <i class="fas fa-history"></i> Historique
+                </h5>
+                <p class="card-text flex-grow-1">
+                    Analyse des données météo sur 10 ans stockées dans HDFS
+                </p>
+                <a href="/historical" class="btn btn-light mt-auto">Voir l'historique</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3 mb-4">
+        <div class="card text-white bg-warning metric-card h-100">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                    <i class="fas fa-exclamation-triangle"></i> Anomalies
+                </h5>
+                <p class="card-text flex-grow-1">
+                    Détection et visualisation des anomalies climatiques
+                </p>
+                <a href="/anomalies" class="btn btn-light mt-auto">Voir les anomalies</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3 mb-4">
+        <div class="card text-white bg-success metric-card h-100">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                    <i class="fas fa-chart-line"></i> Comparaisons
+                </h5>
+                <p class="card-text flex-grow-1">
+                    Comparaison des profils saisonniers entre villes
+                </p>
+                <a href="/comparisons" class="btn btn-light mt-auto">Comparer</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Statistiques globales -->
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Statistiques globales</h5>
+            </div>
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <h3 class="text-primary" id="total-cities">5</h3>
+                        <p>Villes surveillées</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h3 class="text-info" id="total-records">0</h3>
+                        <p>Records climatiques</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h3 class="text-warning" id="total-anomalies">0</h3>
+                        <p>Anomalies détectées</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h3 class="text-success" id="data-freshness">-</h3>
+                        <p>Dernière mise à jour</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Carte des villes -->
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Villes surveillées</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-2 text-center">
+                        <div class="p-3 border rounded">
+                            <h6>Paris</h6>
+                            <small class="text-muted">France</small>
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="p-3 border rounded">
+                            <h6>Lyon</h6>
+                            <small class="text-muted">France</small>
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="p-3 border rounded">
+                            <h6>Berlin</h6>
+                            <small class="text-muted">Allemagne</small>
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="p-3 border rounded">
+                            <h6>Madrid</h6>
+                            <small class="text-muted">Espagne</small>
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="p-3 border rounded">
+                            <h6>Rome</h6>
+                            <small class="text-muted">Italie</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Mise à jour du statut des services
+function updateServiceStatus() {
+    fetch('/api/status')
+        .then(response => response.json())
+        .then(data => {
+            // Statut Kafka
+            const kafkaStatus = document.getElementById('kafka-status');
+            if (data.kafka.connected) {
+                kafkaStatus.className = 'status-indicator status-online';
+            } else {
+                kafkaStatus.className = 'status-indicator status-offline';
+            }
+            
+            // Statut HDFS
+            const hdfsStatus = document.getElementById('hdfs-status');
+            if (data.hdfs.accessible) {
+                hdfsStatus.className = 'status-indicator status-online';
+            } else {
+                hdfsStatus.className = 'status-indicator status-offline';
+            }
+            
+            // Statistiques
+            document.getElementById('total-anomalies').textContent = data.data.anomalies_count;
+            document.getElementById('data-freshness').textContent = new Date(data.kafka.last_update).toLocaleTimeString();
+        })
+        .catch(error => {
+            console.error('Erreur lors de la mise à jour du statut:', error);
+        });
+}
+
+// Mise à jour toutes les 5 secondes
+setInterval(updateServiceStatus, 5000);
+updateServiceStatus(); // Premier appel
+</script>
+{% endblock %}

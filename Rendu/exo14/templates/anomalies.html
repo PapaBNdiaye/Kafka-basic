@@ -1,0 +1,510 @@
+{% extends "base.html" %}
+
+{% block title %}Détection d'Anomalies - Weather Dashboard{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1 class="display-5 mb-4">
+            <i class="fas fa-exclamation-triangle"></i> Détection d'Anomalies
+        </h1>
+    </div>
+</div>
+
+<!-- Statistiques des anomalies -->
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card bg-warning text-white">
+            <div class="card-body">
+                <h5 class="card-title">Anomalies Total</h5>
+                <h2 id="total-anomalies">0</h2>
+                <small>Détectées aujourd'hui</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-danger text-white">
+            <div class="card-body">
+                <h5 class="card-title">Température</h5>
+                <h2 id="temp-anomalies">0</h2>
+                <small>Anomalies thermiques</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-info text-white">
+            <div class="card-body">
+                <h5 class="card-title">Vent</h5>
+                <h2 id="wind-anomalies">0</h2>
+                <small>Anomalies de vent</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-secondary text-white">
+        <div class="card-body">
+            <h5 class="card-title">Alertes</h5>
+            <h2 id="alert-anomalies">0</h2>
+            <small>Anomalies d'alerte</small>
+        </div>
+    </div>
+</div>
+
+<!-- Filtres -->
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Filtres</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label for="anomaly-type-filter">Type d'anomalie</label>
+                        <select class="form-control" id="anomaly-type-filter" onchange="filterAnomalies()">
+                            <option value="">Tous les types</option>
+                            <option value="temperature">Température</option>
+                            <option value="wind">Vent</option>
+                            <option value="alert">Alerte</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="anomaly-city-filter">Ville</label>
+                        <select class="form-control" id="anomaly-city-filter" onchange="filterAnomalies()">
+                            <option value="">Toutes les villes</option>
+                            <option value="Paris">Paris</option>
+                            <option value="Lyon">Lyon</option>
+                            <option value="Berlin">Berlin</option>
+                            <option value="Madrid">Madrid</option>
+                            <option value="Rome">Rome</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="time-range-filter">Période</label>
+                        <select class="form-control" id="time-range-filter" onchange="filterAnomalies()">
+                            <option value="1">Dernière heure</option>
+                            <option value="6">6 dernières heures</option>
+                            <option value="24" selected>24 dernières heures</option>
+                            <option value="168">7 derniers jours</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="severity-filter">Sévérité</label>
+                        <select class="form-control" id="severity-filter" onchange="filterAnomalies()">
+                            <option value="">Toutes les sévérités</option>
+                            <option value="low">Faible</option>
+                            <option value="medium">Moyenne</option>
+                            <option value="high">Élevée</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Graphiques d'évolution -->
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Évolution des anomalies par type</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="anomalyTypeChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Évolution des anomalies par ville</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="anomalyCityChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tableau des anomalies -->
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5>Anomalies récentes</h5>
+                <span class="badge bg-warning" id="anomaly-count">0 anomalies</span>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Ville</th>
+                                <th>Type</th>
+                                <th>Valeur observée</th>
+                                <th>Valeur attendue</th>
+                                <th>Écart</th>
+                                <th>Sévérité</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="anomalies-table">
+                            <tr>
+                                <td colspan="8" class="text-center text-muted">
+                                    Aucune anomalie détectée
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Détails d'anomalie (Modal) -->
+<div class="modal fade" id="anomalyModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Détails de l'anomalie</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="anomaly-details">
+                <!-- Les détails seront chargés dynamiquement -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let anomalyTypeChart, anomalyCityChart;
+let anomaliesData = [];
+let updateTimer = null;
+
+// Initialisation des graphiques
+function initAnomalyCharts() {
+    // Graphique par type d'anomalie
+    const typeCtx = document.getElementById('anomalyTypeChart').getContext('2d');
+    anomalyTypeChart = new Chart(typeCtx, {
+        type: 'line',
+        data: {
+            labels: [],
+            datasets: [
+                {
+                    label: 'Température',
+                    data: [],
+                    borderColor: 'rgb(220, 53, 69)',
+                    backgroundColor: 'rgba(220, 53, 69, 0.1)',
+                    tension: 0.1
+                },
+                {
+                    label: 'Vent',
+                    data: [],
+                    borderColor: 'rgb(13, 202, 240)',
+                    backgroundColor: 'rgba(13, 202, 240, 0.1)',
+                    tension: 0.1
+                },
+                {
+                    label: 'Alerte',
+                    data: [],
+                    borderColor: 'rgb(108, 117, 125)',
+                    backgroundColor: 'rgba(108, 117, 125, 0.1)',
+                    tension: 0.1
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Nombre d\'anomalies'
+                    }
+                }
+            }
+        }
+    });
+
+    // Graphique par ville
+    const cityCtx = document.getElementById('anomalyCityChart').getContext('2d');
+    anomalyCityChart = new Chart(cityCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Paris', 'Lyon', 'Berlin', 'Madrid', 'Rome'],
+            datasets: [{
+                label: 'Anomalies par ville',
+                data: [0, 0, 0, 0, 0],
+                backgroundColor: [
+                    'rgba(220, 53, 69, 0.6)',
+                    'rgba(13, 202, 240, 0.6)',
+                    'rgba(25, 135, 84, 0.6)',
+                    'rgba(255, 193, 7, 0.6)',
+                    'rgba(111, 66, 193, 0.6)'
+                ],
+                borderColor: [
+                    'rgba(220, 53, 69, 1)',
+                    'rgba(13, 202, 240, 1)',
+                    'rgba(25, 135, 84, 1)',
+                    'rgba(255, 193, 7, 1)',
+                    'rgba(111, 66, 193, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Nombre d\'anomalies'
+                    }
+                }
+            }
+        }
+    });
+}
+
+// Mise à jour des données d'anomalies
+function updateAnomaliesData() {
+    fetch('/api/anomalies')
+        .then(response => response.json())
+        .then(data => {
+            anomaliesData = data.data;
+            updateAnomalyStats();
+            updateAnomalyCharts();
+            updateAnomaliesTable();
+        })
+        .catch(error => {
+            console.error('Erreur lors de la mise à jour des anomalies:', error);
+        });
+}
+
+// Mise à jour des statistiques
+function updateAnomalyStats() {
+    const totalAnomalies = anomaliesData.length;
+    const tempAnomalies = anomaliesData.filter(a => a.anomaly_types.includes('temperature')).length;
+    const windAnomalies = anomaliesData.filter(a => a.anomaly_types.includes('wind')).length;
+    const alertAnomalies = anomaliesData.filter(a => a.anomaly_types.includes('alert')).length;
+
+    document.getElementById('total-anomalies').textContent = totalAnomalies;
+    document.getElementById('temp-anomalies').textContent = tempAnomalies;
+    document.getElementById('wind-anomalies').textContent = windAnomalies;
+    document.getElementById('alert-anomalies').textContent = alertAnomalies;
+}
+
+// Mise à jour des graphiques
+function updateAnomalyCharts() {
+    // Graphique par type (simulation de données temporelles)
+    const hours = [];
+    const tempData = [];
+    const windData = [];
+    const alertData = [];
+
+    for (let i = 23; i >= 0; i--) {
+        const hour = new Date(Date.now() - i * 60 * 60 * 1000).getHours();
+        hours.push(hour + ':00');
+        
+        // Simulation de données par heure
+        const hourAnomalies = anomaliesData.filter(a => {
+            const anomalyHour = new Date(a.event_time).getHours();
+            return anomalyHour === hour;
+        });
+        
+        tempData.push(hourAnomalies.filter(a => a.anomaly_types.includes('temperature')).length);
+        windData.push(hourAnomalies.filter(a => a.anomaly_types.includes('wind')).length);
+        alertData.push(hourAnomalies.filter(a => a.anomaly_types.includes('alert')).length);
+    }
+
+    anomalyTypeChart.data.labels = hours;
+    anomalyTypeChart.data.datasets[0].data = tempData;
+    anomalyTypeChart.data.datasets[1].data = windData;
+    anomalyTypeChart.data.datasets[2].data = alertData;
+    anomalyTypeChart.update();
+
+    // Graphique par ville
+    const cities = ['Paris', 'Lyon', 'Berlin', 'Madrid', 'Rome'];
+    const cityData = cities.map(city => 
+        anomaliesData.filter(a => a.city === city).length
+    );
+
+    anomalyCityChart.data.datasets[0].data = cityData;
+    anomalyCityChart.update();
+}
+
+// Mise à jour du tableau
+function updateAnomaliesTable() {
+    const tbody = document.getElementById('anomalies-table');
+    const typeFilter = document.getElementById('anomaly-type-filter').value;
+    const cityFilter = document.getElementById('anomaly-city-filter').value;
+    const timeRange = parseInt(document.getElementById('time-range-filter').value);
+
+    let filteredData = anomaliesData;
+    
+    // Filtrage par type
+    if (typeFilter) {
+        filteredData = filteredData.filter(a => a.anomaly_types.includes(typeFilter));
+    }
+    
+    // Filtrage par ville
+    if (cityFilter) {
+        filteredData = filteredData.filter(a => a.city === cityFilter);
+    }
+    
+    // Filtrage par période
+    const cutoffTime = new Date(Date.now() - timeRange * 60 * 60 * 1000);
+    filteredData = filteredData.filter(a => new Date(a.event_time) > cutoffTime);
+
+    if (filteredData.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="8" class="text-center text-muted">Aucune anomalie correspondant aux filtres</td></tr>';
+        return;
+    }
+
+    tbody.innerHTML = filteredData.slice(0, 20).map(anomaly => {
+        const mainAnomaly = anomaly.anomaly_details[0];
+        const severity = getSeverityLevel(anomaly);
+        
+        return `
+            <tr>
+                <td>${new Date(anomaly.event_time).toLocaleString()}</td>
+                <td>${anomaly.city}, ${anomaly.country}</td>
+                <td>
+                    ${anomaly.anomaly_types.map(type => 
+                        `<span class="badge bg-${getTypeColor(type)}">${type}</span>`
+                    ).join(' ')}
+                </td>
+                <td>${mainAnomaly.details.observed_value.toFixed(1)}</td>
+                <td>${mainAnomaly.details.expected_value.toFixed(1)}</td>
+                <td>${mainAnomaly.details.deviation.toFixed(1)}</td>
+                <td><span class="badge bg-${getSeverityColor(severity)}">${severity}</span></td>
+                <td>
+                    <button class="btn btn-sm btn-outline-primary" onclick="showAnomalyDetails('${anomaly.event_time}')">
+                        Détails
+                    </button>
+                </td>
+            </tr>
+        `;
+    }).join('');
+
+    document.getElementById('anomaly-count').textContent = filteredData.length + ' anomalies';
+}
+
+// Fonctions utilitaires
+function getTypeColor(type) {
+    const colors = {
+        'temperature': 'danger',
+        'wind': 'info',
+        'alert': 'secondary'
+    };
+    return colors[type] || 'secondary';
+}
+
+function getSeverityLevel(anomaly) {
+    const maxDeviation = Math.max(...anomaly.anomaly_details.map(d => d.details.deviation));
+    if (maxDeviation > 10) return 'high';
+    if (maxDeviation > 5) return 'medium';
+    return 'low';
+}
+
+function getSeverityColor(severity) {
+    const colors = {
+        'low': 'success',
+        'medium': 'warning',
+        'high': 'danger'
+    };
+    return colors[severity] || 'secondary';
+}
+
+function filterAnomalies() {
+    updateAnomaliesTable();
+}
+
+function showAnomalyDetails(eventTime) {
+    const anomaly = anomaliesData.find(a => a.event_time === eventTime);
+    if (!anomaly) return;
+
+    const detailsHtml = `
+        <div class="row">
+            <div class="col-md-6">
+                <h6>Informations générales</h6>
+                <ul class="list-unstyled">
+                    <li><strong>Ville:</strong> ${anomaly.city}, ${anomaly.country}</li>
+                    <li><strong>Date:</strong> ${new Date(anomaly.event_time).toLocaleString()}</li>
+                    <li><strong>Mois:</strong> ${anomaly.month}</li>
+                    <li><strong>Nombre d'anomalies:</strong> ${anomaly.anomaly_count}</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h6>Données observées</h6>
+                <ul class="list-unstyled">
+                    <li><strong>Température:</strong> ${anomaly.original_data.temperature}°C</li>
+                    <li><strong>Vent:</strong> ${anomaly.original_data.windspeed} km/h</li>
+                    <li><strong>Précipitations:</strong> ${anomaly.original_data.precipitation} mm</li>
+                    <li><strong>Code météo:</strong> ${anomaly.original_data.weathercode}</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <h6>Détails des anomalies</h6>
+        ${anomaly.anomaly_details.map(detail => `
+            <div class="alert alert-${getTypeColor(detail.type)}">
+                <h6>${detail.type.toUpperCase()}</h6>
+                <ul class="mb-0">
+                    <li>Valeur observée: ${detail.details.observed_value}</li>
+                    <li>Valeur attendue: ${detail.details.expected_value}</li>
+                    <li>Écart: ${detail.details.deviation}</li>
+                    <li>Seuil: ${detail.details.threshold}</li>
+                </ul>
+            </div>
+        `).join('')}
+        <hr>
+        <h6>Profil de référence</h6>
+        <ul class="list-unstyled">
+            <li><strong>Température moyenne:</strong> ${anomaly.reference_profile.temp_mean}°C</li>
+            <li><strong>Vent moyen:</strong> ${anomaly.reference_profile.wind_mean} km/h</li>
+            <li><strong>Écart-type vent:</strong> ${anomaly.reference_profile.wind_std}</li>
+            <li><strong>Prob. alerte L1:</strong> ${anomaly.reference_profile.alert_prob_level_1}</li>
+            <li><strong>Prob. alerte L2:</strong> ${anomaly.reference_profile.alert_prob_level_2}</li>
+        </ul>
+    `;
+
+    document.getElementById('anomaly-details').innerHTML = detailsHtml;
+    
+    const modal = new bootstrap.Modal(document.getElementById('anomalyModal'));
+    modal.show();
+}
+
+// Contrôles
+function startAnomalyUpdates() {
+    if (updateTimer) {
+        clearInterval(updateTimer);
+    }
+    updateTimer = setInterval(updateAnomaliesData, 5000); // 5 secondes
+    updateAnomaliesData(); // Premier appel
+}
+
+function stopAnomalyUpdates() {
+    if (updateTimer) {
+        clearInterval(updateTimer);
+        updateTimer = null;
+    }
+}
+
+// Initialisation
+document.addEventListener('DOMContentLoaded', function() {
+    initAnomalyCharts();
+    startAnomalyUpdates();
+});
+</script>
+{% endblock %}
